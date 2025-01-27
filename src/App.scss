@@ -1,0 +1,12 @@
+@use "./styles/mixins" as m;
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    @include m.flexBox(column, center, center, 0rem);
+}
