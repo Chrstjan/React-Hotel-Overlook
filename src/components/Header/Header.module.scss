@@ -1,3 +1,15 @@
+@use "../../styles/mixins" as m;
+@use "../../styles/variables" as *;
+
 .headerStyling {
-    
+    @include m.flexBox(column, center, center, 0rem);
+    background: $black-color;
+    width: 100vw;
+    padding: 1rem 0rem;
+
+    img {
+        display: block;
+        width: 60%;
+        object-fit: cover;
+    }
 }

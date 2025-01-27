@@ -1,5 +1,11 @@
+import { Wrapper } from "../components/Wrapper/Wrapper"
+
 export const LandingPage = () => {
   return (
-    <div>LandingPage</div>
+    <>
+      <Wrapper>
+        
+      </Wrapper>
+    </>
   )
 }

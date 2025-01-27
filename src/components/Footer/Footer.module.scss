@@ -1,0 +1,28 @@
+@use "../../styles/mixins" as m;
+@use "../../styles/variables" as *;
+@use "../../styles/placeholder";
+
+.footerStyling {
+    @include m.flexBox(column, center, center, 0.5rem);
+    width: 100vw;
+    background: $white-color;
+    position: absolute;
+    bottom: 0;
+    color: $grey-text-color;
+
+    span {
+        @include m.flexBox(row, center, center, 0.5rem);
+        padding-left: 2rem
+    }
+
+    ul {
+        @include m.flexBox(column, center, center, 1rem);
+        @extend %navlinks;
+        
+        li {
+            a {
+                color: $grey-text-color;
+            }
+        }
+    }
+}

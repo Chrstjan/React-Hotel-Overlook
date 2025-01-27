@@ -1,13 +1,13 @@
-.hiddenStyling {
-    display: none;
-}
+@use "../../styles/mixins" as m;
+@use "../../styles/variables" as *;
+@use "../../styles/placeholder";
 
 .navStyling {
-    li {
-        list-style-type: none;
+    @include m.flexBox(column, center, center, 1rem);
 
-        a {
-            text-decoration: none;
-        }
-    }    
+    &.hiddenStyling {
+        display: none;
+    }
+
+    @extend %navlinks;
 }
