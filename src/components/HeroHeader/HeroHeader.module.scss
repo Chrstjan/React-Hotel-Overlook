@@ -1,0 +1,30 @@
+@use "../../styles/mixins" as m;
+@use "../../styles/variables" as *;
+
+.headerContainer {
+  @include m.flexBox(column, flex-start, flex-start, 0rem);
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.headerStyling {
+  background: #444445e1;
+  width: 80vw;
+  height: 12vh;
+  border-bottom-right-radius: 40px;
+
+  h2 {
+    color: $white-color;
+    text-align: center;
+  }
+}
+
+.barStyling {
+  display: block;
+  background: #fb000099;
+  width: 60vw;
+  height: 2vh;
+  border-bottom-right-radius: 40px;
+}
