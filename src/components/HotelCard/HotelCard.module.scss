@@ -1,0 +1,29 @@
+@use "../../styles/mixins" as m;
+@use "../../styles/variables" as *;
+
+.cardStyling {
+  @include m.flexBox(column, flex-start, flex-start, 0rem);
+  background: $white-color;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  figcaption {
+    padding: 0rem 1rem;
+
+    p {
+      display: none;
+    }
+
+    &:hover {
+      h3 {
+        color: $red-color;
+      }
+      p {
+        display: block;
+      }
+    }
+  }
+}

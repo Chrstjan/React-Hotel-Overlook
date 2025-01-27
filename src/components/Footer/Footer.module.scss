@@ -6,9 +6,9 @@
   @include m.flexBox(column, center, center, 0.5rem);
   width: 100vw;
   background: $white-color;
-  position: sticky;
-  bottom: 0;
   color: $grey-text-color;
+  position: static;
+  bottom: 0;
 
   span {
     @include m.flexBox(row, center, center, 0.5rem);
