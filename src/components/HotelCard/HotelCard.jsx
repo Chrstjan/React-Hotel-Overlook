@@ -9,12 +9,14 @@ export const HotelCard = ({ data, thumbnail }) => {
     <>
       {data?.map((item, index) => {
         return (
-          <figure className={s.cardStyling}>
+          <figure key={item?.id || item?.city_id} className={s.cardStyling}>
             {thumbnail ? (
               <img src={thumbnails[index]} alt="Hotel room image" />
-            ) : null}
+            ) : (
+              <img src={`/images/${item?.CityImage?.city_image_filename}`} />
+            )}
             <figcaption>
-              <h3>{item?.title}</h3>
+              <h3>{item?.title || item?.name}</h3>
             </figcaption>
           </figure>
         );

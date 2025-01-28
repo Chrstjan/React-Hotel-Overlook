@@ -1,11 +1,9 @@
 import s from "./HeroSlider.module.scss";
 
-import slider1 from "/images/frankfurt-skyline-germany.jpg";
-
-export const HeroSlider = () => {
+export const HeroSlider = ({ src }) => {
   return (
     <div className={s.heroStyling}>
-      <img src={slider1} alt="Hero Slider images" />
+      <img src={src} alt="Hero Slider images" />
     </div>
   );
 };

@@ -1,0 +1,13 @@
+@use "../../styles/mixins" as m;
+@use "../../styles/variables" as *;
+
+.countryStyling {
+  @include m.flexBox(column, center, center, 1rem);
+  overflow-x: scroll;
+  background: $white-color;
+  margin: 0;
+
+  li {
+    list-style-type: none;
+  }
+}

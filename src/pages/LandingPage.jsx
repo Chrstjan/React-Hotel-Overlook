@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { HeroHeader } from "../components/HeroHeader/HeroHeader";
 import { HeroSlider } from "../components/HeroSlider/HeroSlider";
+import slider1 from "/images/frankfurt-skyline-germany.jpg";
 import { Wrapper } from "../components/Wrapper/Wrapper";
 import { WrapperHeader } from "../components/WrapperHeader/WrapperHeader";
 import { useFetch } from "../hooks/UseFetch";
@@ -46,10 +47,18 @@ export const LandingPage = () => {
     console.log(hotelRooms);
   }, [hotelRooms]);
 
+  if (isLoading) {
+    return <h2>Loading...</h2>;
+  }
+
+  if (error) {
+    return <h2>Error in fetch, try again</h2>;
+  }
+
   return (
     <>
       <Wrapper>
-        <HeroSlider />
+        <HeroSlider src={slider1} />
         <HeroHeader text="Velkommen til Hotel Overlook Online" />
       </Wrapper>
       <Wrapper type="cardsWrapper">
